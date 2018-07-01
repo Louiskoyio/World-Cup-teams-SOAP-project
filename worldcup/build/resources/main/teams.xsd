@@ -1,0 +1,31 @@
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://localhost:8080/worldcup"
+           targetNamespace="http://localhost:8080/worldcup" elementFormDefault="qualified">
+
+    <xs:element name="getTeamRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="team" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getTeamResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="team" type="tns:team"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="team">
+        <xs:sequence>
+            <xs:element name="team" type="xs:string"/>
+            <xs:element name="group" type="xs:string"/>
+            <xs:element name="qualificationStatus" type="xs:string"/>
+            <xs:element name="topScorer" type="xs:string"/>
+            <xs:element name="nextOpponent" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
